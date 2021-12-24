@@ -1,0 +1,16 @@
+{
+    "details" : [
+        {
+            "username" : "alex02",
+            "name" : "Alex Johnson",
+            "password":"123"
+        },
+    {
+        "username":"henry07",
+        "name":"Henry Smith",
+        "password":"abc"
+
+
+    }
+]
+}
