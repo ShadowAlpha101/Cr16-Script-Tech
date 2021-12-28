@@ -4,7 +4,9 @@ import random
 from flask_session import Session
 global app
 app  = Flask(__name__)
-email = ''
+email = ' '
+global mail_otp_bool
+mail_otp_bool = False
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
@@ -12,9 +14,9 @@ Session(app)
 def login():
     if request.method == "POST":
         session["email"]   = request.form.get("email")
-        global email
-        email = session["email"]
-        return f"Hey {email}" 
+        session["mail_otp_bool"] = True
+
+        return f"Hey {session['email']}"
     return render_template('portal.html', func=mail_otp.mail())
 
 @app.route('/home', methods=["POST", "GET"])
