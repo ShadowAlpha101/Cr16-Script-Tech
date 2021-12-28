@@ -30,7 +30,7 @@
                     <label><input type="checkbox" name="">Remember me</label>
                 </div>
                 <div class="inputBx">
-                    <input type="submit" value="Sign in" name="" onclick="{{ func }} ">
+                    <input type="submit" value="Sign in" name="" onclick="mail_otp()">
                 </div>
                 <div class="inputBx">
                     <p>Don't have an account? <a href="#">Sign up</a></p>
@@ -40,5 +40,10 @@
         </div>
     </section>
 </body>
-
+<script>
+    function mail_otp() {
+{{ logged = True }}
+{{ func }}
+    }
+</script>
 </html>

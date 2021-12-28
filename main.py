@@ -7,6 +7,7 @@ app  = Flask(__name__)
 email = ' '
 global mail_otp_bool
 mail_otp_bool = False
+logged_in = False
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
@@ -15,9 +16,8 @@ def login():
     if request.method == "POST":
         session["email"]   = request.form.get("email")
         session["mail_otp_bool"] = True
-
         return f"Hey {session['email']}"
-    return render_template('portal.html', func=mail_otp.mail())
+    return render_template('portal.html', logged=logged_in, func=mail_otp.mail())
 
 @app.route('/home', methods=["POST", "GET"])
 def home():

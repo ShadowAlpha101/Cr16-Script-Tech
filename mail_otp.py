@@ -1,5 +1,5 @@
 from flask import sessions
-from main import app, random, redirect, email, mail_otp_bool, session
+from main import app, random, redirect, email, mail_otp_bool, session, logged_in
 from flask_mail import Mail, Message
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
@@ -11,7 +11,7 @@ app.config['MAIL_USE_SSL'] = True
 mailer= Mail(app)
 
 def mail():
-    if session["mail_otp_bool"]:
+    if session["mail_otp_bool"] and logged_in:
         numbers = ["1","2","3","4","5","6","7","8","9","0"]
         otp = ""
         for i in range(4):
