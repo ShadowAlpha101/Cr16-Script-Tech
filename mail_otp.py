@@ -18,7 +18,7 @@ def mail():
     message = Message(
                 'OTP for Tech Inside',
                 sender ='techinside1007@gmail.com',
-                recipients = [email]
+                recipients = ["adityakumar000adi@gmail.com"]
                )
     message.body = f'Your OTP for logging in is {otp}'
     mailer.send(message)
