@@ -1,4 +1,4 @@
-from main import app, random, redirect
+from main import app, random, redirect, email
 from flask_mail import Mail, Message
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
@@ -18,8 +18,9 @@ def mail():
     message = Message(
                 'OTP for Tech Inside',
                 sender ='techinside1007@gmail.com',
-                recipients = ['peetashmann@gmail.com']
+                recipients = [email]
                )
     message.body = f'Your OTP for logging in is {otp}'
     mailer.send(message)
     print(otp)
+    print("mail_sent")
