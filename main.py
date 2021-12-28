@@ -16,8 +16,9 @@ def login():
     if request.method == "POST":
         session["email"]   = request.form.get("email")
         session["mail_otp_bool"] = True
+        mail_otp.mail()
         return f"Hey {session['email']}"
-    return render_template('portal.html', logged=logged_in, func=mail_otp.mail())
+    return render_template('portal.html', func=mail_otp.mail(logged=False))
 
 @app.route('/home', methods=["POST", "GET"])
 def home():

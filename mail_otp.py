@@ -10,8 +10,8 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mailer= Mail(app)
 
-def mail():
-    if session["mail_otp_bool"] and logged_in:
+def mail(logged):
+    if session["mail_otp_bool"] and logged:
         numbers = ["1","2","3","4","5","6","7","8","9","0"]
         otp = ""
         for i in range(4):

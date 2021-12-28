@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    {% block content%}
     <section>
         <div class="imgBx">
              <img src="/static/img.jpeg" alt="">
@@ -30,7 +31,7 @@
                     <label><input type="checkbox" name="">Remember me</label>
                 </div>
                 <div class="inputBx">
-                    <input type="submit" value="Sign in" name="" onclick="mail_otp()">
+                    <input type="submit" value="Sign in" name="" onclick="{{ func(logged=true) }}">
                 </div>
                 <div class="inputBx">
                     <p>Don't have an account? <a href="#">Sign up</a></p>
@@ -39,11 +40,6 @@
            </div>
         </div>
     </section>
+    {% endblock %}
 </body>
-<script>
-    function mail_otp() {
-{% set logged = True %}
-{{ func }}
-    }
-</script>
 </html>
