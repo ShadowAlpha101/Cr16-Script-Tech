@@ -11,14 +11,19 @@ logged_in = False
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+logged = False
+def func():
+    logged = True
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == "POST":
+    if request.method == "POST" and logged:
         session["email"]   = request.form.get("email")
+        print(session['email'])
         session["mail_otp_bool"] = True
+        print(session['mail_otp_bool'])
         mail_otp.mail()
         return f"Hey {session['email']}"
-    return render_template('portal.html', func=mail_otp.mail(logged=False))
+    return render_template('portal.html', func=func())
 
 @app.route('/home', methods=["POST", "GET"])
 def home():
