@@ -2,6 +2,9 @@ from flask import Flask, render_template, redirect, request, session
 import mail_otp
 import random
 from flask_session import Session
+import json 
+
+
 global app
 app  = Flask(__name__)
 email = ' '
@@ -13,7 +16,9 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 logged = False
 def func():
+    global logged
     logged = True
+    print("running")
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == "POST" and logged:

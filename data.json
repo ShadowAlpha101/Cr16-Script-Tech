@@ -1,16 +1,24 @@
 {
     "details" : [
         {
-            "username" : "alex02",
-            "name" : "Alex Johnson",
-            "password":"123"
+        "username" : "peetashmann01",
+        "name" : "Peetashmann Arora",
+        "password":"123"
         },
     {
-        "username":"henry07",
-        "name":"Henry Smith",
+        "username":"ekas02",
+        "name":"Ekas Walia",
         "password":"abc"
-
-
-    }
+    },
+    {
+    "username":"aditya03",
+    "name":"Aditya Kumar",
+    "password":"xyz"
+},
+{
+    "username":"armaan04",
+    "name":"Armaandeep Singh",
+    "password":"000"
+}
 ]
 }

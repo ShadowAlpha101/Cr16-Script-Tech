@@ -11,7 +11,6 @@ app.config['MAIL_USE_SSL'] = True
 mailer= Mail(app)
 
 def mail():
-    logged = True
     if session["mail_otp_bool"] :
         numbers = ["1","2","3","4","5","6","7","8","9","0"]
         otp = ""
