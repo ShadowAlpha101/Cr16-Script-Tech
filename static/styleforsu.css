@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Sign-Up-Form {
+    width: 300px;
+    box-shadow: 0 0 30px #c5cec5;
+    background: #ffd5f1;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+}
