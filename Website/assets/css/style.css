@@ -227,7 +227,7 @@ section{
 	background-color: #fff;
 }
 .element .menu:after{
-	color: #424242;
+	color: #000000;
 }
 .element .title:after{
 	left: 0;
@@ -272,7 +272,7 @@ section{
 	transition: all 0.3s ease-in-out;
 }
 .menu-item{
-	background-color: #1a1a1a;
+	background-color: #ffffff;
 	text-align: center;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -284,7 +284,7 @@ section{
 .menu-item ul a li{
 	padding: 15px 0;
 	list-style-type: none;
-	color: #fff;
+	color: #000000;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .menu-item ul a:hover li{
@@ -298,16 +298,18 @@ section{
 	margin-top: 0;
 }
 .dark-bar{
-	background-color: #424242;
+	background-color: #ffffff;
 	background-image: none;
 }
-.navigation-bar{
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.navigation-bar{	
+	border-bottom: black;
 	padding: 15px 0;
 	font-size: 30px;
+	position: absolute;
+	left: -750px;
 }
 .navigation-bar a{
-	color: #fff;
+	color: black;
 }
 .menu{
 	position: relative;
@@ -316,16 +318,16 @@ section{
 
 .menu:after{
 	position: absolute;
-	left: -65px;
+	left: -750px;
 	top: 10px;
-	color: #fff;
+	color: #000000;
 	font-size: 16px;
 }
 .m:after{
-	content: 'MENU';
+	content: '';
 }
 .c:after{
-	content: 'CLOSE';
+	content: '';
 }
 
 

@@ -49,7 +49,7 @@ section{
 }
 .formBx h2{
     position: absolute;
-    color:  #607d8b;
+    color:  #808080;
     font-weight: 600;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -58,7 +58,7 @@ section{
     display: inline-block;
     letter-spacing: 1px;
     top: 6rem;
-    left: 61.5rem;
+    left: 67.69rem;
 }
 .inputBx{
     margin-bottom: 20px;
@@ -165,14 +165,4 @@ button{
 form{
     position: absolute;
     top: 13rem;
-}
-#sq{
-    position: absolute;
-    left: 54rem;
-    top: 4rem;
-    height: 40rem;
-    width: 27rem;
-    z-index: -1;
-    opacity: 7;
-    border: 4px solid grey;
 }

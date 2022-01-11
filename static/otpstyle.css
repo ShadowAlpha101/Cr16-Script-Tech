@@ -23,7 +23,7 @@
 }
 .otpform input{
     position: absolute;
-    border-color: grey;
+    border-color: rgb(131, 131, 131);
     border-radius: 2rem;
 
 }
@@ -31,7 +31,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     /* border-radius: 10px; */
     background:linear-gradient(225deg,#e91e63,#03a9f4) ;
