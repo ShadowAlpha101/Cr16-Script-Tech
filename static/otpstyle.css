@@ -1,0 +1,39 @@
+#otp img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.otpform{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+.otpform span{
+    position: absolute;
+    color: black;
+    font-weight: 400;
+    font-size: 2rem;
+    top: -1rem;
+    left: 2rem;
+    margin: 2px;
+    font-style: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.otpform input{
+    position: absolute;
+    border-color: grey;
+    border-radius: 2rem;
+
+}
+.otpform button{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    /* border-radius: 10px; */
+    background:linear-gradient(225deg,#e91e63,#03a9f4) ;
+    top: 3rem;
+}

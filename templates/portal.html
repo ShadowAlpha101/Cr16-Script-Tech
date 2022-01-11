@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/img/img.png" type="image/x-icon">
+</head>
+
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="/static/img/imgs01.jpeg" alt="">
+        </div>
+<div id="sq"></div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Login</h2>
+                <div id=ce>
+                    <h4 id="client"><a onclick="">Client</a></h4>
+                    <h4 id="employee"><a href="">Employee</a></h4>
+                </div>
+                <form action="{{ url_for('login') }}" method="post">
+                    <div class="inputBx">
+                        <span id="span_email">Email</span>
+                        <input type="Email" name="email" id="email">
+                    </div>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="inputBx">
+                        <span>OTP</span>
+                        <button style="color: white; font-size:15px;" onclick="{{ func }}">Get OTP</button>
+                        <input type="otp" name="">
+                    </div>
+                    <div class="inputBx">
+                        <span>Office Code</span>
+                        <input type="" name="" id="">
+                    </div>
+                    <div class="inputBx">
+                        <span>Employee Code</span>
+                        <input type="" name="" id="">
+                    </div>
+                    <!-- <div class="remember">
+                    <label><input type="checkbox" name="">Remember me</label>
+                </div> -->
+                    <div class="inputBx" id="sub">
+                        <input type="submit" value="Sign in" name="" onclick="{{ func_1 }}"><br>
+                        <div class="inputBx">
+                            <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+                        </div>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+<link rel>
+<script>
+    var x = "{{ error_bool }}";
+    var y = x.toLowerCase();
+    if (y == "true") {
+        document.getElementById('span_email').style.color = "red";
+        document.getElementById('email').style.borderColor = "red";
+        document.getElementById('email').placeholder = "Please Enter Your Email First";
+        console.log("test_successful!!")
+    }
+    else {
+        document.getElementById('email').value = "{{ mail_var  }}";
+        document.getElementById('password').value = "{{ password_var }}";
+    }
+
+</script>
+
+</html>

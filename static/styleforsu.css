@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/static/img/image02.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.img {
+    height: 150px;
+}
+.Sign-Up-Form {
+    border-radius: 30px;
+    width: 330px;
+    box-shadow: 0 0 30px #c5cec5;
+    background: #faf8fb;
+    padding: 2%;
+    margin: 2.5% auto 0;
+    text-align: center;
+    align-items: center;
+}
+
+.input-box {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #001aff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #00aaff;
+    background:transparent;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+button {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 25px;
+    margin: 10px 0;
+    border: 2px solid #00aaff;
+    outline: none; 
+    cursor: pointer;
+}
+a {
+    text-decoration: blue;
+}
+hr {
+    margin-top: 20px;
+    width: 80px;
+}
+.or {
+     background-color: white;
+     width: 30px;
+     margin: -20px auto 11px
+
+}
+img {
+    width: 75px;
+}
