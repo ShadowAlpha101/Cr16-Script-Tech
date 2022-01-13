@@ -1,39 +1,48 @@
-#otp img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-.otpform{
-    position: absolute;
-    left: 40%;
-    top: 40%;
-}
-.otpform span{
-    position: absolute;
-    color: black;
-    font-weight: 400;
-    font-size: 2rem;
-    top: -1rem;
-    left: 2rem;
-    margin: 2px;
-    font-style: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.otpform input{
-    position: absolute;
-    border-color: grey;
-    border-radius: 2rem;
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
+.Recondite img{
+    width: auto;
 }
-.otpform button{
-    position: absolute;
-    justify-content: center;
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+body {
+    background-color: rgb(7, 0, 112);
+    display: flex;
     align-items: center;
-    color: black;
-    font-size: 20px;
-    /* border-radius: 10px; */
-    background:linear-gradient(225deg,#e91e63,#03a9f4) ;
-    top: 3rem;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.DigitBx
+input {
+width: 150px;
+height: 170px;
+background-color: lighten(rgb(255, 255, 255), 5%);
+border:rgb(255, 255, 255);
+border-radius: 5px;
+line-height: 50px;
+text-align: center;
+font-size: 70px;
+font-family: 'Raleway', sans-serif;
+font-weight: 200;
+color: rgb(255, 0, 0);
+margin: 0 2px;
+}
+
+.splitter {
+    padding: 0 5px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+.OTPBx {
+    margin-bottom: 20px;
+    font-size: 69px;
+    color: white;
 }

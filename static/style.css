@@ -58,7 +58,7 @@ section{
     display: inline-block;
     letter-spacing: 1px;
     top: 6rem;
-    left: 61.5rem;
+    left: 68rem;
 }
 .inputBx{
     margin-bottom: 20px;
@@ -122,7 +122,7 @@ section{
 }
 #employee{
     position: absolute;
-    left: 10rem;
+    left: 14rem;
     font-size: 20px;
     top: -3.5rem;
 }

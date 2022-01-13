@@ -85,13 +85,13 @@ def home():
 def signup():
     return render_template('signup.html')
 
-@app.route('/temp_otp')
+@app.route('/otp')
 def otp():
     if request.method=="POST":
         pass
-    return render_template('temp_otp.html', names=names)
+    return render_template('otp.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-  
+    

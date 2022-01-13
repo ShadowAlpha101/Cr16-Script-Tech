@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="/static/otpstyle.css">
 </head>
 <body>
-    <section id="otp">
-        <img src="/static/img/otpbg.jpeg" alt="">
-        <div class="otpform">
-            <span>OTP</span><br>
-            <input type="otp" name=""><br>
-            <button style="color: white; font-size:15px;" onclick="{{ func }}">Get OTP</button>
-        </div>
-    </section>
+    <div class="OTPBx">
+        Enter Your OTP provided by our Company
+    </div>
+    <form method="get" class="DigitBx" data-group-name="digit" data-autosubmit="false" autocomplete="off">
+    <input type="text" id="gig-1" name="gig-1" data-next="gig-2"maxlength="1"/>
+    <span class="splitter">&ndash;</span>
+    <input type="text" id="gig-2" name="gig-2" data-next="gig-3" data-previous="gig-1" maxlength="1"/>
+    <span class="splitter">&ndash;</span>
+    <input type="text" id="gig-3" name="gig-3" data-next="gig-4" data-previous="gig-2" maxlength="1"/>
+    <span class="splitter">&ndash;</span>
+    <input type="text" id="gig-4" name="gig-4" data-next="gig-5" data-previous="gig-3" maxlength="1"/>
+    <span class="splitter">&ndash;</span>
+    <input type="text" id="gig-5" name="gig-5" data-next="gig-6" data-previous="gig-4" maxlength="1"/>
+    <span class="splitter">&ndash;</span>
+    <input type="text" id="gig-6" name="gig-6" data-previous="gig-5"maxlength="1"/>
+</form>
 </body>
 </html>
