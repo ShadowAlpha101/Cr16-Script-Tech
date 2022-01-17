@@ -17,35 +17,35 @@
         </div>
         <div class="contentBx">
             <div class="formBx">
-                <h2>Login</h2>
+                <h2>Login as:</h2>
                 <div id=ce>
-                    <h4 id="client"><a onclick="">Client</a></h4>
-                    <h4 id="employee"><a href="">Employee</a></h4>
+                    <h4 id="client"><a  onclick="client_Hide(); return false;">Client</a></h4>
+                    <h4 id="employee"><a onclick="employee_Hide(); return false;">Employee</a></h4>
                 </div>
                 <form action="{{ url_for('login') }}" method="post">
                     <div class="inputBx">
                         <span id="span_email">Email</span>
-                        <input type="Email" name="email" id="email">
+                        <input type="Email" name="email" id="email" required>
                     </div>
                     <div class="inputBx">
-                        <span>Password</span>
-                        <input type="password" name="password" id="password">
+                        <span id="password_span">Password</span>
+                        <input type="password" name="password" id="password" required>
                     </div>
                     <div class="inputBx">
-                        <span>Office Code</span>
-                        <input type="" name="office" id="office">
+                        <span id="office_span">Office Code</span>
+                        <input type="" name="office" id="office" required>
                     </div>
                     <div class="inputBx">
-                        <span>Employee Code</span>
-                        <input type="" name="xyz" id="xyz">
+                        <span id="employee_span">Employee Code</span>
+                        <input type="" name="xyz" id="xyz" required>
                     </div>
-                    <div class="remember">
+                    <!-- <div class="remember">
                     <label><input type="checkbox" name="">Remember me</label>
-                </div>
+                </div> -->
                     <div class="inputBx" id="sub">
-                        <input type="submit" value="Get OTP" name="" onclick="{{ func_1 }}"><br>
+                        <input type="submit" value="Get OTP" name="" onclick="{{ func_1 }}" id="get_otp"><br><br>
                         <div class="inputBx">
-                            <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+                            <p id="signup_p">Don't have an account? <a href="/signup" id="signup">Sign Up</a></p>
                         </div>
                 </form>
 
@@ -54,10 +54,36 @@
 
     </section>
 </body>
-<link rel>
 <script>
+    var email = document.getElementById('email')
+    email.style.display='none'
+    var span_email = document.getElementById('span_email')
+    span_email.style.display = 'none';
+    var password = document.getElementById('password')
+    password.style.display='none';
+    var span_password = document.getElementById('password_span')
+    span_password.style.display = 'none';
+    var office = document.getElementById('office');
+    var office_span = document.getElementById('office_span');
+    office.style.display='none';
+    office_span.style.display='none';
+    var xyz = document.getElementById('xyz');
+    var xyz_span = document.getElementById('employee_span');
+    xyz.style.display='none';
+    xyz_span.style.display='none';
+    var get_otp = document.getElementById('get_otp')
+    get_otp.style.display='none';  
+    var sign_up = document.getElementById('signup')
+    sign_up.style.display='none';
+    var signup = document.getElementById('signup_p')
+    signup.style.display='none';
+
+
+
     var incorrect_password = "{{ incorrect_password }}"
     incorrect_password = incorrect_password.toLowerCase();
+    incorrect_employee = "{{ ie }}"
+    incorrect_office = "{{ io }}"
     var x = "{{ error_bool }}";
     var y = x.toLowerCase();
     if (y == "true") {
@@ -73,7 +99,69 @@
         document.getElementById('email').value = "{{ mail_var }}";
         console.log("TEST");
     }
+    else if (incorrect_office == "true"){  
+        document.getElementById('password').style.color = "red";
+        document.getElementById('password').style.borderColor = "red";
+        document.getElementById('office').placeholder = "Incorrect Office Code";
+        document.getElementById('email').value = "{{ mail_var }}";
+        console.log("TEST");
+    }
+    else if (incorrect_employee == "true"){  
+        document.getElementById('password').style.color = "red";
+        document.getElementById('password').style.borderColor = "red";
+        document.getElementById('xyz').placeholder = "Incorrect Employee Office Code";
+        document.getElementById('email').value = "{{ mail_var }}";
+        console.log("TEST");
+    }
     
+    function client_Hide(){
+        var email = document.getElementById('email')
+        email.style.display=''
+        var span_email = document.getElementById('span_email')
+        span_email.style.display = '';
+        var password = document.getElementById('password')
+        password.style.display='';
+        var span_password = document.getElementById('password_span')
+        span_password.style.display = '';
+        var get_otp = document.getElementById('get_otp')
+        get_otp.style.display='';  
+        var sign_up = document.getElementById('signup')
+        sign_up.style.display='';
+        var signup = document.getElementById('signup_p')
+        signup.style.display='';
+        var office = document.getElementById('office');
+        var office_span = document.getElementById('office_span');
+        office.style.display='none';
+        office_span.style.display='none';
+        var xyz = document.getElementById('xyz');
+        var xyz_span = document.getElementById('employee_span');
+        xyz.style.display='none';
+        xyz_span.style.display='none';
+    }
+    function employee_Hide(){
+        var email = document.getElementById('email')
+        email.style.display=''
+        var span_email = document.getElementById('span_email')
+        span_email.style.display = '';
+        var password = document.getElementById('password')
+        password.style.display='';
+        var span_password = document.getElementById('password_span')    
+        span_password.style.display = '';
+        var office = document.getElementById('office');
+        office.style.display='';
+        var office_span = document.getElementById('office_span');
+        office_span.style.display='';
+        var xyz = document.getElementById('xyz');
+        var xyz_span = document.getElementById('employee_span');
+        xyz.style.display='';
+        xyz_span.style.display='';
+        var get_otp = document.getElementById('get_otp')
+        get_otp.style.display='';  
+        var sign_up = document.getElementById('signup')
+        sign_up.style.display='';
+        var signup = document.getElementById('signup_p')
+        signup.style.display='';
+    }
 </script>
 
 </html>
