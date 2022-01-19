@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="/static/dash_style.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
+
 <body>
+
+    <input type="checkbox" id="nav-toggle">    
+
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-accusoft"></span>g Inside</h2>
+            <h2><span class="lab la-accusoft"></span> <span>Tech Inside</span>
+            </h2>
         </div>
 
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="" g="active"><span class="lfgas la-igloo"></span> <span>fh
-                <li>ggfg
-fhhf                </li>
-                <li>
-                    <a href=""><span class="las la-fh-list"></span> <span>f</span></a>
+                    <a href="" class="active"><span class="las la-igloo"></span> <span>Dashboard</span></a>
                 </li>
                 <li>
-f                </li>h
-                <li>
-fh                </li>hfh
-                <li>
-                    <a href=""><span class="las fh-user-circle"></span> <span>Accounts</span></a>
+                    <a href=""><span class="las la-users"></span> <span>Employee</span></a>
                 </li>
                 <li>
-fh                </li>
+                    <a href=""><span class="las la-clipboard-list"></span> <span>Projects</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-shipping-bag"></span> <span>Orders</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-receipt"></span> <span>Inventory</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-user-circle"></span> <span>Accounts</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-clipboard-list"></span> <span>Task</span></a>
+                </li>
             </ul>
         </div>
     </div>
-f        <header>
+    <div class="main-content">
+        <header>
             <h2>
-                <label for="">
+                <label for="nav-toggle">
                     <span class="las la-bars"></span>
                 </label>
 
-                gnnngng
+                Dashboard
             </h2>
 
             <div class="search-wrapper">
-                <span classn="las la-search"></span>
-n            </div>g
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Search Here" />
+            </div>
 
             <div class="user-wrapper">
-                <img src="/nstatic/ggnimg/Titglnne_logo2.png" widnth="gn" height="4n0px" alt="">
+                <img src="/static/img/Title_logo2.png" width="40px" height="40px" alt="">
                 <div>
-                    <h4>Jnognghnng nngDoe</h4>
-                    <smalngl>g admignnn</small>
+                    <h4>John Doe</h4>
+                    <small>Super admin</small>
                 </div>
             </div>
         </header>
@@ -62,37 +76,406 @@ n            </div>g
             <div class="cards">
                 <div class="card-single">
                     <div>
-                        <h1>ngngn</h1>
-n                    </div>b
-                    <div>ngng
+                        <h1>54</h1>
+                        <span>Employee</span>
+                    </div>
+                    <div>
                         <span class="class las la-users"></span>
                     </div>
                 </div>
                 <div class="card-single">
-                    <div>g
+                    <div>
                         <h1>79</h1>
-                        <span>gngn</span>
-                    </div>nngdn
-                    <div>g
-                        <span class="gnngn las la-clipboard"></span>
+                        <span>Projects</span>
+                    </div>
+                    <div>
+                        <span class="class las la-clipboard"></span>
                     </div>
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>gng</h1>
-ng                    </div>
-                    <div>
-                        <span class="class g la-clipboard"></span>
-                    </div>gn
-                <div class="cardgn-single">
-                    <div>gnn
-                        <h1>$gn</h1>
-                        <span>g<g/gspan>
-                    </div>n
-                    <div>g
-                        <span cgngnlass="class las la-google-wallet"></span>
+                        <h1>129</h1>
+                        <span>Task</span>
                     </div>
-                </ngn>
+                    <div>
+                        <span class="class las la-clipboard"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>$100k</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <span class="class lab la-google-wallet"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Projects</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                              <table width="100%">
+                                <thead>
+                                    <tr>
+                                        <td>Project Title</td>
+                                        <td>Porject Department</td>
+                                        <td>status</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td>UI Team</td>
+                                        <td><span class="status purple"></span>Review</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Development</td>
+                                        <td>Frontend</td>
+                                        <td><span class="status pink"></span>in progress</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ushop App</td>
+                                        <td>Mobile Team</td>
+                                        <td><span class="status orange"></span>pending
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td>UI Team</td>
+                                        <td><span class="status purple"></span>Review
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Development</td>
+                                        <td>Frontend</td>
+                                        <td><span class="status pink"></span>in progress</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ushop App</td>
+                                        <td>Mobile Team</td>
+                                        <td><span class="status orange"></span>pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td>UI Team</td>
+                                        <td><span class="status purple"></span>Review</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Development</td>
+                                        <td>Frontend</td>
+                                        <td><span class="status pink"></span>in progress</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ushop App</td>
+                                        <td>Mobile Team</td>
+                                        <td><span class="status orange"></span>pending</td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customers">
+                    <div class="card">
+                            <div class="card-header">
+                            <h3>Employees</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="/static/img/Avatar 1.jpeg" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO Excert</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="/static/img/Avatar 2.jpeg" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO Excert</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="/static/img/Avatar 3.jpeg" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO Excert</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="/static/img/Avatar 4.jpeg" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO Excert</small>
+                                    </div>
+                                </div>
+                                <div class="contact"> 
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="/static/img/Avatar 5.jpeg" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO Excert</small>
+                                    </div>
+                                </div>
+                                <div class="contact"> 
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="/static/img/Avatar 6.jpeg" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO Excert</small>
+                                    </div>
+                                </div>
+                                <div class="contact"> 
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="/static/img/Avatar 7.jpeg" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO Excert</small>
+                                    </div>
+                                </div>
+                                <div class="contact"> 
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+
+                            </div>
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 7.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 8.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 9.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 10.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 11.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 12.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 13.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 14.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 15.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 16.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 17.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                                <div class="customer">
+                                    <div class="info">
+                                        <img src="/static/img/Avatar 18.jpeg" width="40px" height="40px" alt="">
+                                        <div>
+                                            <h4>Lewis S. Cunningham</h4>
+                                            <small>CEO Excert</small>
+                                        </div>
+                                    </div>
+                                    <div class="contact"> 
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-comment"></span>
+                                        <span class="las la-phone"></span>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>

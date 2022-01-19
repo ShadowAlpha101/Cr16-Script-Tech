@@ -11,7 +11,7 @@
     <div class="OTPBx">
         Enter the OTP provided by our Company
     </div>
-    <form method="get" class="DigitBx" data-group-name="digit" data-autosubmit="false" autocomplete="off" id="form">
+    <form method="post" action="{{ url_for('otp') }}" class="DigitBx" data-group-name="digit" data-autosubmit="false" autocomplete="off" id="form">
     <input type="text" id="gig-1" name="gig-1" data-next="gig-2"maxlength="1" onkeyup="gig_1()"/>
     <span class="splitter">&ndash;</span>
     <input type="text" id="gig-2" name="gig-2" data-next="gig-3" data-previous="gig-1" maxlength="1" onkeyup="gig_2()"/>
@@ -20,11 +20,20 @@
     <span class="splitter">&ndash;</span>
     <input type="text" id="gig-4" name="gig-4" data-next="gig-5" data-previous="gig-3" maxlength="1" onkeyup="gig_4()"/>
     <span class="splitter">&ndash;</span>
-    <input type="text" id="gig-5" name="gig-5" data-next="gig-6" data-previous="gig-4" maxlength="1" onkeyup="gig_5()"/>
+    <input type="text" id="gig-5" nam   e="gig-5" data-next="gig-6" data-previous="gig-4" maxlength="1" onkeyup="gig_5()"/>
     <span class="splitter">&ndash;</span>
     <input type="text" id="gig-6" name="gig-6" data-previous="gig-5"maxlength="1" onkeyup="gig_6()"/>
+    <button type="submit"onclick="login_request()">Confirm OTP</button>
 </form>
-<script>    
+<script> 
+    var gig_1 = document.getElementById('gig-1')  
+    var gig_2 = document.getElementById('gig-2')  
+    var gig_3 = document.getElementById('gig-3')  
+    var gig_4 = document.getElementById('gig-4')  
+    var gig_5 = document.getElementById('gig-5')  
+    var gig_6 = document.getElementById('gig-6')
+    var otp = `${gig_1}${gig_2}${gig_3}${gig_4}${gig_5}${gig_6}`
+
 function gig_1() {
     var gig_1 = document.getElementById('gig-1').value;
     var gig_2 = document.getElementById('gig-2');
