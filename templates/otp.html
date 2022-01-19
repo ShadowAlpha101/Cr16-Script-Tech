@@ -20,7 +20,7 @@
     <span class="splitter">&ndash;</span>
     <input type="text" id="gig-4" name="gig-4" data-next="gig-5" data-previous="gig-3" maxlength="1" onkeyup="gig_4()"/>
     <span class="splitter">&ndash;</span>
-    <input type="text" id="gig-5" name="gig-5" data-next="gig-6" data-previous="gig-4" maxlength="1" onkeyup="gig_5()"/>
+    <input type="text" id="gig-5" nam   e="gig-5" data-next="gig-6" data-previous="gig-4" maxlength="1" onkeyup="gig_5()"/>
     <span class="splitter">&ndash;</span>
     <input type="text" id="gig-6" name="gig-6" data-previous="gig-5"maxlength="1" onkeyup="gig_6()"/>
     <button type="submit"onclick="login_request()">Confirm OTP</button>
@@ -33,6 +33,7 @@
     var gig_5 = document.getElementById('gig-5')  
     var gig_6 = document.getElementById('gig-6')
     var otp = `${gig_1}${gig_2}${gig_3}${gig_4}${gig_5}${gig_6}`
+
 function gig_1() {
     var gig_1 = document.getElementById('gig-1').value;
     var gig_2 = document.getElementById('gig-2');
