@@ -31,18 +31,23 @@ for x in data["details"]:
     emails.append(x["email"])
     office.append(x["office_code"])
     employee.append(x["employee_code"])
-
+print(employee)
 def login_request():
     global logged
     logged = True
 
 
 def otp_request():
+    global x
     x = True
+    print("LOLOLOLOLOLOLOLOLOL")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error_bool = False
+    session['incorrect_password'] = False
+    session['incorrect_employee'] = False
+    session['incorrect_office'] = False
     try:
         if request.method == "POST" and x:
             session["email"]   = request.form.get("email")
@@ -57,20 +62,23 @@ def login():
                     print("NOT CORRECT PASSWORD")
                 elif session['password'] == passwords[session['number']]:
                     print("CORRECT PASSWORD")
-                    session['incorrect_password'] = False
-                    print(session['password'])
-                    print(session['office'])
-                    if session['office'] in office:
-                        print("YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY")
+                    if session['office'] == office[session["number"]]:
                         if session['employee'] == employee[session['number']]:
                             mail_otp.mail()
-                            return redirect("/temp_otp", code=302)
+                            return redirect("/otp", code=302)
                         elif session['emloyee'] != employee[session['number']]:
-                            incorrect_employee = True
+                            session['incorrect_employee'] = True
+                            print("INCORRECT EMPLOYEE CODE")
+                        elif session["employee"] == '':
+                            client_login = True
                     elif session['office'] != office[session['number']]:
-                            incorrect_office = True
-
-            return render_template('portal.html', error_bool=error_bool, mail_var=session['email'], password_var=session['password'], incorrect_password=session['incorrect_password'])
+                            session['incorrect_office'] = True
+                            print("INCORRECT OFFICE CODE")
+                    elif session["office"] == "":
+                        client_login = True
+                        mail_otp.mail()
+                        return redirect("/otp", code=302)
+            return render_template('portal.html', error_bool=error_bool, mail_var=session['email'], password_var=session['password'], incorrect_password=session['incorrect_password'], ie=session['incorrect_employee'], io=session['incorrect_office'])
     except error:       
         error_bool = True
         return render_template('portal.html', error_bool=error_bool)
@@ -91,6 +99,9 @@ def otp():
         pass
     return render_template('otp.html')
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -43,7 +43,7 @@
                     <label><input type="checkbox" name="">Remember me</label>
                 </div> -->
                     <div class="inputBx" id="sub">
-                        <input type="submit" value="Get OTP" name="" onclick="{{ func_1 }}" id="get_otp"><br><br>
+                        <input type="submit" value="Get OTP" name="" onclick="otp_request()" id="get_otp"><br><br>
                         <div class="inputBx">
                             <p id="signup_p">Don't have an account? <a href="/signup" id="signup">Sign Up</a></p>
                         </div>
@@ -137,6 +137,8 @@
         var xyz_span = document.getElementById('employee_span');
         xyz.style.display='none';
         xyz_span.style.display='none';
+        office.removeAttribute("required")
+        xyz.removeAttribute("required")
     }
     function employee_Hide(){
         var email = document.getElementById('email')

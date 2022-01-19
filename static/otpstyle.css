@@ -12,7 +12,8 @@ body, html {
 }
 
 body {
-    background-color: rgb(7, 0, 112);
+    background-color:#20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +34,7 @@ font-family: 'Raleway', sans-serif;
 font-weight: 200;
 color: rgb(255, 0, 0);
 margin: 0 2px;
+text-transform: uppercase;
 }
 
 .splitter {
