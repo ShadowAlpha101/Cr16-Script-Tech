@@ -14,7 +14,7 @@ def mail():
     if session["mail_otp_bool"] :
         numbers = ["1","2","3","4","5","6","7","8","9","0"]
         otp = ""
-        for i in range(3):
+        for i in range(6):
             otp += random.choice(numbers)
 
         message = Message(
