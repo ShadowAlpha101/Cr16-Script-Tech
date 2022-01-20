@@ -5,28 +5,32 @@
             "password": "123",
             "email": "peetashmann@gmail.com",
             "office_code": "001",
-            "employee_code": "01"
+            "employee_code": "01",
+            "type": "employee"
         },
         {
             "name": "Ekas Walia",
             "password": "abc",
             "email": "ekaswalia@gmail.com",
             "office_code": "002",
-            "employee_code": "02"
+            "employee_code": "02",
+            "type": "client"
         },
         {
             "name": "Aditya Kumar",
             "password": "xyz",
             "email": "adityakumar000adi@gmail.com",
             "office_code": "003",
-            "employee_code": "03"
+            "employee_code": "03",
+            "type": "employee"
         },
         {
             "name": "Armaandeep Singh",
             "password": "a02",
-            "email": "armaanarora02.singh@gmail.com",
+            "email": "braincodepython@gmail.com",
             "office_code": "004",
-            "employee_code": "04"
+            "employee_code": "04",
+            "type": "client"
         }
     ]
 }

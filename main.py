@@ -26,12 +26,15 @@ passwords = []
 emails = []
 office = []
 employee = []
+type_s = []
+
 for x in data["details"]:
     names.append(x["name"])
     passwords.append(x["password"])
     emails.append(x["email"])
     office.append(x["office_code"])
     employee.append(x["employee_code"])
+    type_s.append(x['type'])
 print(employee)
 def login_request():
     global otp_bool
@@ -60,6 +63,7 @@ def login():
             session['employee'] = request.form.get("xyz")
             if session['email'] in emails:
                 session['number'] = emails.index(session['email'])
+                session['name'] = names[session['number']]
                 if session['password'] != passwords[session['number']]:
                     session['incorrect_password'] = True
                     print("NOT CORRECT PASSWORD")
@@ -69,8 +73,6 @@ def login():
                         if session['employee'] == employee[session['number']]:
                             mail_otp.mail()
                             return redirect("/otp", code=302)
-                        elif session["employee"] == '':
-                            client_login = True
                         elif session['employee'] != employee[session['number']]:
                             session['incorrect_employee'] = True
                             print("INCORRECT EMPLOYEE CODE")
@@ -130,7 +132,10 @@ def otp():
         session['otp_entered'] += session['gig_6']
         print(session['otp_entered'])
         if session['otp_entered'] == session['otp']:
-            return redirect('/dashboard')
+            if type_s[session['number']] == "client":
+                return redirect('/dashboard')
+            if type_s[session['number']] == "employee":
+                return redirect('/employee')
         elif session['otp_entered'] != session['otp']:
             session['wrong_otp'] = True
             return render_template('otp.html', wo=session['wrong_otp'])
@@ -143,5 +148,8 @@ def dashboard():
 @app.route('/home')
 def home():
     return render_template('index.html')
+@app.route('/employee')
+def employee_func():
+    return render_template('employee.html')
 if __name__ == "__main__":
     app.run(debug=True)
