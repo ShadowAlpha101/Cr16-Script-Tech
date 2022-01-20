@@ -24,13 +24,13 @@
             "employee_code": "03",
             "type": "employee"
         },
-        {
+        {   
             "name": "Armaandeep Singh",
             "password": "a02",
             "email": "braincodepython@gmail.com",
             "office_code": "004",
             "employee_code": "04",
             "type": "client"
-        },
+        }
     ]
 }
