@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decription" content="This is discription">
+    <meta name="keywords" content="">
+    <title>Tasty Meals</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" 
+    integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script1.js"></script>
+    
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Tasty Meals</a>
+        <ul>
+            <li class="items"><a href="#home">Home</a></li>
+            <li class="items"><a href="#about">About Us</a></li>
+            <li class="items"><a href="recipesloading.html">Recipe</a></li>
+            <li class="items"><a href="#gallary">Gallary</a></li>
+            <li class="items"><a href="#">Gallary</a></li>
+        </ul>
+    </header>
+    <!-- background image -->
+    <img src="Img/bg1.jpg" alt="" id="bg1">
+    <section id="home">
+        <h2 id="text"><span>It's time for new recipes</span><br>Tasty Meals</h2>
+
+    </section>  
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Get some new recipes and start cooking and enjoy the meal. You can get many intresting recipes at  our site <br> and go and learn the recipes and cook new dishes for your loved ones.
+        </p>
+        <div id="imgset">
+            <div>
+                <img src="Img/img1.jpg" alt="" id="img1">
+                <h3>Chole Bhuture</h3>
+            </div>
+            <div>
+                <img src="Img/img2.jpg" alt="" id="img2">
+                <h3>Butter Chiken</h3>
+            </div>
+            <div>
+                <img src="Img/img3.jpg" alt="" id="img3">
+                <h3>Khandvi</h3>
+            </div>
+        </div> 
+        <br>
+    </section>
+    <section id="cocial"> 
+        <h3>Connect with our Social Media</h3>
+        <img src="Img/social.jpg" alt="social">
+        <div class="wrapper">
+            <div class="button">
+          
+      
+      
+      
+              <div class="icon"><i class="fab fa-facebook-f"></i></div>
+              <span>Facebook</span>
+            </div>
+
+            <div class="button">
+              <div class="icon"><i class="fab fa-instagram"></i></div>
+              <span> Instagram</span>
+            </div>
+            
+      
+            <div class="button">
+              <div class="icon"><i class="fab fa-youtube"></i></div>
+              <span>YouTube</span>
+            </div>
+          </div>
+          <script src="https://kit.fontawesome.com/a076d05399.js"></script>      
+    </section>
+<section id='gallary'>
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .swiper-container {
+          width: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+  
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 300px;
+          height: 300px;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+        }
+      </style>
+    </head>
+  
+    <body >
+      <!-- Swiper -->
+      <h3>Gallary</h3>
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="Img/g1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g6.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g7.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="Img/g9.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+  
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+</section>
+<section id="suggest">
+  <h2> Want to suggest a recipe to us or have any doubt in the recipe!</h3>
+  <h3> So whats the delay tell us right now in the form below this.</h2>
+
+    <div>
+      <section id="contact">
+        <div id="contact-box">
+            <form action="connect.php" method"POST">
+                <div class="form-group">
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="name" type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone number">Phone Number:</label><br>
+                    <input type="Phone" name="number"  type="number" id="number" placeholder="Enter your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label><br>
+                    <textarea name="message"  type="text" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button class="btn1" type="reset" onclick = "myreset();">Reset Now</button>
+                    <br>
+                    <button class="btn1" type="submit" onclick = "getConfirmation();">Submit Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

@@ -47,7 +47,10 @@ def login():
     session['incorrect_password'] = False
     session['incorrect_employee'] = False
     session['incorrect_office'] = False
+    session['office'] = "n"
+    session['employee'] = "a"
     try:
+        session['employee'] = "a"
         if request.method == "POST" and x:
             session["email"]   = request.form.get("email")
             session['password'] = request.form.get("password")
@@ -65,28 +68,23 @@ def login():
                         if session['employee'] == employee[session['number']]:
                             mail_otp.mail()
                             return redirect("/otp", code=302)
-                        elif session['emloyee'] != employee[session['number']]:
-                            session['incorrect_employee'] = True
-                            print("INCORRECT EMPLOYEE CODE")
                         elif session["employee"] == '':
                             client_login = True
-                    elif session['office'] != office[session['number']]:
-                            session['incorrect_office'] = True
-                            print("INCORRECT OFFICE CODE")
+                        elif session['employee'] != employee[session['number']]:
+                            session['incorrect_employee'] = True
+                            print("INCORRECT EMPLOYEE CODE")
                     elif session["office"] == "":
                         client_login = True
                         mail_otp.mail()
                         return redirect("/otp", code=302)
+                    elif session['office'] != office[session['number']]:
+                            session['incorrect_office'] = True
+                            print("INCORRECT OFFICE CODE")
             return render_template('portal.html', error_bool=error_bool, mail_var=session['email'], password_var=session['password'], incorrect_password=session['incorrect_password'], ie=session['incorrect_employee'], io=session['incorrect_office'])
     except error:       
         error_bool = True
         return render_template('portal.html', error_bool=error_bool)
     return render_template('portal.html', error_bool=error_bool)
-@app.route('/home', methods=["POST", "GET"])
-def home():
-    if not session.get("email"):
-        return redirect('/login')
-    return "Hi"
 
 @app.route('/signup')
 def signup():
@@ -94,15 +92,42 @@ def signup():
 
 @app.route('/otp', methods=['GET', 'POST'])
 def otp():
+    session['gig-1'] = None
     if not session.get("email"):
         return redirect('/login')
     if request.method == "POST":
-        return redirect('/dashboard')
+        session['gig_1'] = request.form.get('gig-1')
+        session['otp_entered'] = session['gig_1']
+        session['gig_2'] = request.form.get('gig-2')
+        session['otp_entered'] += session['gig_2']
+        session['gig_3'] = request.form.get('gig-3')
+        session['otp_entered'] += session['gig_3']
+        session['gig_4'] = request.form.get('gig-4')
+        session['otp_entered'] += session['gig_4']
+        session['gig_5'] = request.form.get('gig-5')
+        session['otp_entered'] += session['gig_5']
+        session['gig_6'] = request.form.get('gig-6')
+        session['otp_entered'] += session['gig_6']
+        print(session['otp_entered'])
+        if session['otp_entered'] == session['otp']:
+            return redirect('/dashboard')
+        elif session['otp_entered'] != session['otp']:
+            session['wrong_otp'] = True
+            return render_template('otp.html', wo=session['wrong_otp'])
     return render_template('otp.html')
-
 @app.route('/dashboard')
 def dashboard():
-
     return render_template('dashboard.html')
+@app.route('/home')
+def home():
+    return render_template('index.html')
+
+@app.route('/home')
+def home():
+    return render_template('index.html')
+
+@app.route('/home')
+def home():
+    return render_template('index.html')
 if __name__ == "__main__":
     app.run(debug=True)
