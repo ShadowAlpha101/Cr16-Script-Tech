@@ -119,7 +119,13 @@ def otp():
 def dashboard():
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     return render_template('dashboard.html')
+=======
+@app.route('/home')
+def home():
+    return render_template('index.html')
+>>>>>>> Stashed changes
 =======
 @app.route('/home')
 def home():
