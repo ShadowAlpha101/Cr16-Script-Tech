@@ -141,31 +141,31 @@ section{
 	padding: 100px 0;
 }
 .ubutia-icon{
-	background:transparent url(../images/logo.png) no-repeat;
+	background:transparent url(/static//img/imgs.jpeg) no-repeat;
     width: 187px;
     height: 68px;
 	display:block;
 }
 .graphic-design{
-	background:transparent url(../images/graphic-design.png) no-repeat;
+	background:transparent url(/static/images/graphic-design.png) no-repeat;
     width: 120px;
     height: 120px;
 	display:block;
 }
 .webdevelopment{
-	background:transparent url(../images/webdevelopment.png) no-repeat;
+	background:transparent url(/static/images/webdevelopment.png) no-repeat;
     width: 120px;
     height: 120px;
 	display:block;
 }
 .printing{
-	background:transparent url(../images/printing.png) no-repeat;
+	background:transparent url(/static/images/printing.png) no-repeat;
     width: 120px;
     height: 120px;
 	display:block;
 }
 .play-icon{
-	background:transparent url(../images/video-play-icon.png) no-repeat;
+	background:transparent url(/static/images/video-play-icon.png) no-repeat;
     width: 70px;
     height: 69px;
 	display:block;
@@ -333,7 +333,7 @@ section{
 
 /*Home page*/
 .header{
-	background-image: url(../images/1.jpg);
+	background-image: url(/static/images/1.jpg);
 	height: 100vh;
 	position: relative;
 	min-height: 659px;
@@ -389,7 +389,7 @@ section{
 	line-height: 200%;
 }
 .expert .bg-img{
-	background-image: url(../images/2.jpg);
+	background-image: url(/static/images/2.jpg);
 	background-position-x: 85%;
 	height: 100%;
 }
@@ -403,7 +403,7 @@ section{
 
 
 .ubutia-quote{
-	background-image: url(../images/3.jpg);
+	background-image: url(/static/images/quote.png);
 	/*padding: 120px 0;*/
 	color: #fff;
 	font-style: italic;

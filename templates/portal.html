@@ -55,6 +55,56 @@
     </section>
 </body>
 <script>
+    function employee_Hide(){
+        var email = document.getElementById('email')
+        email.style.display=''
+        var span_email = document.getElementById('span_email')
+        span_email.style.display = '';
+        var password = document.getElementById('password')
+        password.style.display='';
+        var span_password = document.getElementById('password_span')    
+        span_password.style.display = '';
+        var office = document.getElementById('office');
+        office.style.display='';
+        var office_span = document.getElementById('office_span');
+        office_span.style.display='';
+        var xyz = document.getElementById('xyz');
+        var xyz_span = document.getElementById('employee_span');
+        xyz.style.display='';
+        xyz_span.style.display='';
+        var get_otp = document.getElementById('get_otp')
+        get_otp.style.display='';  
+        var sign_up = document.getElementById('signup')
+        sign_up.style.display='';
+        var signup = document.getElementById('signup_p')
+        signup.style.display='';
+    }
+    function client_Hide(){
+        var email = document.getElementById('email')
+        email.style.display=''
+        var span_email = document.getElementById('span_email')
+        span_email.style.display = '';
+        var password = document.getElementById('password')
+        password.style.display='';
+        var span_password = document.getElementById('password_span')
+        span_password.style.display = '';
+        var get_otp = document.getElementById('get_otp')
+        get_otp.style.display='';  
+        var sign_up = document.getElementById('signup')
+        sign_up.style.display='';
+        var signup = document.getElementById('signup_p')
+        signup.style.display='';
+        var office = document.getElementById('office');
+        var office_span = document.getElementById('office_span');
+        office.style.display='none';
+        office_span.style.display='none';
+        var xyz = document.getElementById('xyz');
+        var xyz_span = document.getElementById('employee_span');
+        xyz.style.display='none';
+        xyz_span.style.display='none';
+        office.removeAttribute("required")
+        xyz.removeAttribute("required")
+    }
     var email = document.getElementById('email')
     email.style.display='none'
     var span_email = document.getElementById('span_email')
@@ -93,77 +143,30 @@
 
     }
     else if (incorrect_password == "true"){  
+        client_Hide()
         document.getElementById('password').style.color = "red";
         document.getElementById('password').style.borderColor = "red";
         document.getElementById('password').placeholder = "Incorrect Password";
         document.getElementById('email').value = "{{ mail_var }}";
         console.log("TEST");
     }
-    else if (incorrect_office == "true"){  
-        document.getElementById('password').style.color = "red";
-        document.getElementById('password').style.borderColor = "red";
+    else if (incorrect_office == "True"){  
+        employee_Hide()
+        document.getElementById('office').style.color = "red";
+        document.getElementById('office').style.borderColor = "red";
         document.getElementById('office').placeholder = "Incorrect Office Code";
         document.getElementById('email').value = "{{ mail_var }}";
         console.log("TEST");
     }
-    else if (incorrect_employee == "true"){  
-        document.getElementById('password').style.color = "red";
-        document.getElementById('password').style.borderColor = "red";
+    else if (incorrect_employee == "True"){  
+        employee_Hide()
+        document.getElementById('xyz').style.color = "red";
+        document.getElementById('xyz').style.borderColor = "red";
         document.getElementById('xyz').placeholder = "Incorrect Employee Office Code";
         document.getElementById('email').value = "{{ mail_var }}";
         console.log("TEST");
     }
     
-    function client_Hide(){
-        var email = document.getElementById('email')
-        email.style.display=''
-        var span_email = document.getElementById('span_email')
-        span_email.style.display = '';
-        var password = document.getElementById('password')
-        password.style.display='';
-        var span_password = document.getElementById('password_span')
-        span_password.style.display = '';
-        var get_otp = document.getElementById('get_otp')
-        get_otp.style.display='';  
-        var sign_up = document.getElementById('signup')
-        sign_up.style.display='';
-        var signup = document.getElementById('signup_p')
-        signup.style.display='';
-        var office = document.getElementById('office');
-        var office_span = document.getElementById('office_span');
-        office.style.display='none';
-        office_span.style.display='none';
-        var xyz = document.getElementById('xyz');
-        var xyz_span = document.getElementById('employee_span');
-        xyz.style.display='none';
-        xyz_span.style.display='none';
-        office.removeAttribute("required")
-        xyz.removeAttribute("required")
-    }
-    function employee_Hide(){
-        var email = document.getElementById('email')
-        email.style.display=''
-        var span_email = document.getElementById('span_email')
-        span_email.style.display = '';
-        var password = document.getElementById('password')
-        password.style.display='';
-        var span_password = document.getElementById('password_span')    
-        span_password.style.display = '';
-        var office = document.getElementById('office');
-        office.style.display='';
-        var office_span = document.getElementById('office_span');
-        office_span.style.display='';
-        var xyz = document.getElementById('xyz');
-        var xyz_span = document.getElementById('employee_span');
-        xyz.style.display='';
-        xyz_span.style.display='';
-        var get_otp = document.getElementById('get_otp')
-        get_otp.style.display='';  
-        var sign_up = document.getElementById('signup')
-        sign_up.style.display='';
-        var signup = document.getElementById('signup_p')
-        signup.style.display='';
-    }
 </script>
 
 </html>
