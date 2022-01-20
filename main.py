@@ -1,4 +1,5 @@
 from os import error
+import re
 from flask import Flask, render_template, redirect, request, session
 import mail_otp
 import random
@@ -86,8 +87,27 @@ def login():
         return render_template('portal.html', error_bool=error_bool)
     return render_template('portal.html', error_bool=error_bool)
 
-@app.route('/signup')
+@app.route('/signup', methods=['POST', 'GET'])
 def signup():
+    if request.method == 'POST':
+        session['name'] = request.form.get('name')
+        session['email_su'] = request.form.get('email')
+        session['password_su'] = request.form.get('password')
+        session['c_password_su'] = request.form.get('c-password')
+        if session['c_password_su'] != session['password_su']:
+            wrong_c_password = True
+            return render_template('signup.html', wp=wrong_c_password)
+        elif session['c_password_su'] == session['password_su']:
+            data_su = {"name":f"{session['name']}",
+                    "password":f"{session['password_su']}",
+                    "email":f"{session['email_su']}"
+            }
+            with open('data.json','r+') as file:
+                file_data = json.load(file)
+                file_data["details"].append(data_su)
+                file.seek(0)
+                json.dump(file_data, file, indent = 4)
+                return redirect('/login')
     return render_template('signup.html')
 
 @app.route('/otp', methods=['GET', 'POST'])
@@ -118,13 +138,7 @@ def otp():
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
-@app.route('/home')
-def home():
-    return render_template('index.html')
 
-@app.route('/home')
-def home():
-    return render_template('index.html')
 
 @app.route('/home')
 def home():

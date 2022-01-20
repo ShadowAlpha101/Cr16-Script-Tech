@@ -1,33 +1,32 @@
 {
-    "details" : [
+    "details": [
         {
-        "name" : "Peetashmann Arora",
-        "password":"123",
-        "email":"peetashmann@gmail.com",
-        "office_code":"001",
-        "employee_code":"01"
-        
+            "name": "Peetashmann Arora",
+            "password": "123",
+            "email": "peetashmann@gmail.com",
+            "office_code": "001",
+            "employee_code": "01"
         },
-    {
-        "name":"Ekas Walia",
-        "password":"abc",
-        "email":"ekaswalia@gmail.com",
-        "office_code":"002",
-        "employee_code":"02"
-    },
-    {
-    "name":"Aditya Kumar",
-    "password":"xyz",
-    "email":"adityakumar000adi@gmail.com",
-    "office_code":"003",
-    "employee_code":"03"
-},
-{
-    "name":"Armaandeep Singh",
-    "password":"a02",
-    "email":"armaanarora02.singh@gmail.com",
-    "office_code":"004",
-    "employee_code":"04"
-}
-]
+        {
+            "name": "Ekas Walia",
+            "password": "abc",
+            "email": "ekaswalia@gmail.com",
+            "office_code": "002",
+            "employee_code": "02"
+        },
+        {
+            "name": "Aditya Kumar",
+            "password": "xyz",
+            "email": "adityakumar000adi@gmail.com",
+            "office_code": "003",
+            "employee_code": "03"
+        },
+        {
+            "name": "Armaandeep Singh",
+            "password": "a02",
+            "email": "armaanarora02.singh@gmail.com",
+            "office_code": "004",
+            "employee_code": "04"
+        }
+    ]
 }

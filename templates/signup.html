@@ -11,12 +11,12 @@
         <div class="Sign-Up-Form">
             <img src="/static/img/imgs.jpeg" height="75px" width="100px">
             <h1>Sign Up</h1>
-            <form>
-                <input type="Username" class="input-box" placeholder="Enter Your Username">
-            <input type="Email id" class="input-box" placeholder="Enter Your Email Address">
-            <input type="Username" class="input-box" placeholder="Enter Your Username">
-            <input type="Password" class="input-box" placeholder="Enter Your Password">
-            <input type="Confirm Your Password" class="input-box" placeholder="Confirm Your Password">
+            <form action="{{ url_for('signup') }}" method="post">
+            <input type="Username" class="input-box" placeholder="Enter Your Name" name="name">
+            <input type="Email id" class="input-box" placeholder="Enter Your Email Address" name="email">
+            <input type="Username" class="input-box" placeholder="Enter Your Username" name="username">
+            <input type="Password" class="input-box" placeholder="Enter Your Password" name="password">
+            <input type="Confirm Your Password" class="input-box" placeholder="Confirm Your Password" name="c-password">
             <p><span><input type="checkbox"></span> I agree to the terms and conditions</p>
             <button>Sign Up</button>
             <hr>
@@ -27,4 +27,10 @@
             </form>
         </div>
     </body>
+    <script>
+        var wo = {wo}
+        if (wo == "True") {
+            alert("Confirm Password doesn't match the Password" )
+        }
+    </script>
 </html>
