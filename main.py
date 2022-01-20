@@ -35,7 +35,6 @@ for x in data["details"]:
     office.append(x["office_code"])
     employee.append(x["employee_code"])
     type_s.append(x['type'])
-print(employee)
 def login_request():
     global otp_bool
     opt_bool= True
@@ -66,23 +65,19 @@ def login():
                 session['name'] = names[session['number']]
                 if session['password'] != passwords[session['number']]:
                     session['incorrect_password'] = True
-                    print("NOT CORRECT PASSWORD")
                 elif session['password'] == passwords[session['number']]:
-                    print("CORRECT PASSWORD")
                     if session['office'] == office[session["number"]]:
                         if session['employee'] == employee[session['number']]:
                             mail_otp.mail()
                             return redirect("/otp", code=302)
                         elif session['employee'] != employee[session['number']]:
                             session['incorrect_employee'] = True
-                            print("INCORRECT EMPLOYEE CODE")
                     elif session["office"] == "":
                         client_login = True
                         mail_otp.mail()
                         return redirect("/otp", code=302)
                     elif session['office'] != office[session['number']]:
                             session['incorrect_office'] = True
-                            print("INCORRECT OFFICE CODE")
             return render_template('portal.html', error_bool=error_bool, mail_var=session['email'], password_var=session['password'], incorrect_password=session['incorrect_password'], ie=session['incorrect_employee'], io=session['incorrect_office'])
     except error:       
         error_bool = True
@@ -115,8 +110,6 @@ def signup():
 @app.route('/otp', methods=['GET', 'POST'])
 def otp():
     session['gig-1'] = None
-    if not session.get("email"):
-        return redirect('/login')
     if request.method == "POST":
         session['gig_1'] = request.form.get('gig-1')
         session['otp_entered'] = session['gig_1']
@@ -130,7 +123,6 @@ def otp():
         session['otp_entered'] += session['gig_5']
         session['gig_6'] = request.form.get('gig-6')
         session['otp_entered'] += session['gig_6']
-        print(session['otp_entered'])
         if session['otp_entered'] == session['otp']:
             if type_s[session['number']] == "client":
                 return redirect('/dashboard')
@@ -142,6 +134,8 @@ def otp():
     return render_template('otp.html')
 @app.route('/dashboard')
 def dashboard():
+    if not session.get("email"):
+        return redirect('/login')
     return render_template('dashboard.html')
 
 

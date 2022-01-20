@@ -25,4 +25,3 @@ def mail():
                 )
         message.body = f'Your OTP for logging in is {otp}'
         mailer.send(message)
-        print("mail_sent")
