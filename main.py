@@ -97,7 +97,10 @@ def signup():
         elif session['c_password_su'] == session['password_su']:
             data_su = {"name":f"{session['name']}",
                     "password":f"{session['password_su']}",
-                    "email":f"{session['email_su']}"
+                    "email":f"{session['email_su']}",
+                    "office_code":"001",
+                    "employee":"01",
+                    "type":"client"
             }
             with open('data.json','r+') as file:
                 file_data = json.load(file)
