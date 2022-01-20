@@ -37,7 +37,8 @@
             "password": "123",
             "email": "shadowmystic1225@gmail.com",
             "office_code": "001",
-            "employee": "01"
+            "employee_code": "01",
+            "type":"client"
         }
     ]
 }
