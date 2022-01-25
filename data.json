@@ -37,7 +37,7 @@
             "password": "123",
             "email": "test@test.com",
             "office_code": "001",
-            "employee": "01",
+            "employee_code": "01",
             "type": "client"
         }
     ]
