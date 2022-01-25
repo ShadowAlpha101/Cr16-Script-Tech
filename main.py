@@ -78,11 +78,11 @@ def login():
                         return redirect("/otp", code=302)
                     elif session['office'] != office[session['number']]:
                             session['incorrect_office'] = True
-            return render_template('portal.html', error_bool=error_bool, mail_var=session['email'], password_var=session['password'], incorrect_password=session['incorrect_password'], ie=session['incorrect_employee'], io=session['incorrect_office'])
+            return render_template('portal.html', error_bool=error_bool, mail_var=session['email'], password_var=session['password'], incorrect_password=session['incorrect_password'], ie=session['incorrect_employee'], io=session['incorrect_office'], otp_request=otp_request())
     except error:       
         error_bool = True
-        return render_template('portal.html', error_bool=error_bool)
-    return render_template('portal.html', error_bool=error_bool)
+        return render_template('portal.html', error_bool=error_bool, otp_request=otp_request())
+    return render_template('portal.html', error_bool=error_bool, otp_request=otp_request())
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
